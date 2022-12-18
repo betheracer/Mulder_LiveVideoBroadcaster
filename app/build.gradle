@@ -39,4 +39,6 @@ dependencies {
 
     implementation project(path: ':liveVideoBroadcasterSDK')
     implementation 'net.butterflytv.utils:rtmp-client:3.1.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer:r2.3.1'
 }

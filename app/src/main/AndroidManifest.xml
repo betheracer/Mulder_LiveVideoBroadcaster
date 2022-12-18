@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.antmedia.android.liveVideoBroadcaster">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mulder_LiveVideoBroadcaster">
-        <activity android:name=".MainActivity"
+
+        <activity android:name="io.antmedia.android.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +23,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="io.antmedia.android.liveVideoBroadcaster.LiveVideoBroadcasterActivity"
+            android:theme="@style/AppThemeDark"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            />
+
+
+        <activity android:name="io.antmedia.android.liveVideoPlayer.LiveVideoPlayerActivity"
+            android:theme="@style/AppThemeDark"
+            android:exported="true"
+            />
+
+        <service android:name="io.antmedia.android.broadcaster.LiveVideoBroadcaster" />
     </application>
 
 </manifest>
