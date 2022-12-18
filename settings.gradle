@@ -1,2 +1,3 @@
 rootProject.name = "Mulder_LiveVideoBroadcaster"
 include ':app'
+include ':liveVideoBroadcasterSDK'
